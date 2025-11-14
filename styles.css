@@ -5,11 +5,13 @@
 
 html,
 body {
-  background-color: rgb(240, 242, 245);;
+  background-color: rgb(240, 242, 245);
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   height: 100%;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
+
+/* NAVIGATION BAR */
 nav {
   display: flex;
   align-items: center;
@@ -27,15 +29,17 @@ nav {
 .logo img {
   height: 40px;
   width: 40px;
-  border: none;
   border-radius: 50%;
   padding: 10px 20px;
   position: relative;
   top: 20px;
 }
 
+/* ICONS */
 .icons ul {
   display: flex;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .icons ul li {
@@ -49,12 +53,12 @@ nav {
   width: 25px;
 }
 
-.icons ul li img:hover{
-background-color: rgba(228, 230, 235, 0.6);
-border-radius: 2px;
+.icons ul li img:hover {
+  background-color: rgba(228, 230, 235, 0.6);
+  border-radius: 2px;
 }
 
-
+/* SIDEMENU */
 .sidemenu {
   display: flex;
 }
@@ -63,12 +67,11 @@ border-radius: 2px;
   list-style: none;
   margin: 0 8px;
   background: rgba(0, 0, 0, 0.068);
-  border: none;
   border-radius: 50%;
   padding: 10px;
 }
 
-.sidemenu li:hover{
+.sidemenu li:hover {
   cursor: pointer;
   background-color: rgba(228, 230, 235, 0.6);
 }
@@ -78,43 +81,26 @@ border-radius: 2px;
   width: 23px;
 }
 
+/* REMOVE NAV SEARCH BAR */
+.searchbar input {
+  display: none !important;
+}
+
+/* SEARCH ICON FOR MOBILE */
+.nav-search-icon {
+  display: none;
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* TOPBAR CENTER INPUT */
 div input {
   background-color: rgba(0, 0, 0, 0.068);
 }
 
-.searchbar input {
-  width: 15rem;
-  height: 35px;
-  position: relative;
-  left: 85px;
-  top: -32px;
-  font-size: 1rem;
-  padding-left: 15px;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  outline: none;
-  transition: 0.5s;
-  background: url("https://cdn-icons-png.flaticon.com/512/622/622669.png")
-  no-repeat 15px center;
-  background-size: 13px;
-  background-color: rgba(0, 0, 0, 0.068);
-}
-
-.searchbar input::placeholder {
-  position: relative;
-  left: 30px;
-  font-size: 0.9rem;
-}
-
-.searchbar input:focus {
-  background: 0;
-  background-color: rgba(0, 0, 0, 0.068);
-}
-
-.searchbar input:focus::placeholder {
-  left: 10px;
-}
-
+/* LAYOUT SECTIONS */
 .section1 {
   display: flex;
   height: 100vh;
@@ -127,12 +113,10 @@ div input {
   width: 20%;
   height: 90vh;
   overflow-y: auto;
-  direction: ltr;
   text-align: left;
   position: fixed;
   bottom: 10px;
   scrollbar-width: none;
-  
 }
 
 .leftsection ol li {
@@ -142,9 +126,9 @@ div input {
   margin: 20px 10px;
 }
 
-.leftsection ol li:hover{
+.leftsection ol li:hover {
   cursor: pointer;
-  background-color:rgba(0, 0, 0, 0.068) ;
+  background-color: rgba(0, 0, 0, 0.068);
 }
 
 .leftsection img {
@@ -159,7 +143,6 @@ div input {
   left: 20px;
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.2px;
 }
 
 .rightsection {
@@ -208,8 +191,8 @@ div input {
   top: -6.5rem;
   left: 12.5rem;
   font-size: 1rem;
-  color: black;
   font-weight: 500;
+  color: black;
 }
 
 .sponsored2 {
@@ -249,9 +232,9 @@ div input {
   margin: 20px 15px;
 }
 
-.rightsection ol li:hover{
+.rightsection ol li:hover {
   cursor: pointer;
-  background-color:rgba(0, 0, 0, 0.068) ;
+  background-color: rgba(0, 0, 0, 0.068);
 }
 
 .rightsection ol img {
@@ -272,6 +255,7 @@ div input {
   color: black;
 }
 
+/* CENTER SECTION */
 .centersection {
   width: 55%;
   height: 100%;
@@ -280,6 +264,7 @@ div input {
   top: 10%;
 }
 
+/* TOPBAR CREATE POST BOX */
 .topbar {
   height: 3.6rem;
   width: 80%;
@@ -327,6 +312,7 @@ div input {
   margin-left: 5px;
 }
 
+/* STORIES */
 .stories-container {
   display: flex;
   gap: 10px;
@@ -342,18 +328,18 @@ div input {
 }
 
 .story img {
-width: 100%;
-height: 80%;
-object-fit: cover;
-border-radius: 15px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-.story span{
-    position: relative;
-    /* top: 5px; */
-    left: 2.5rem;
+.story span {
+  position: relative;
+  left: 2.5rem;
 }
 
+/* FEED CONTENT */
 .feed-content {
   width: 90%;
   background-color: #fff;
@@ -366,28 +352,23 @@ border-radius: 15px;
   overflow: hidden;
 }
 
-.top-content img{
-height: 35px;
-width: 35px;
-position: relative;
-top: 15px;
-left:15px;
+.top-content img {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 15px;
+  left: 15px;
 }
 
-.top-content{
+.top-content {
   display: flex;
   justify-content: space-between;
 }
 
-.top-content span{
+.top-content span {
   position: relative;
   top: 4px;
   left: 1.2rem;
-}
-
-.top-content .icons:hover{
-  cursor: pointer;
-  /* background-color:rgba(0, 0, 0, 0.068) ; */
 }
 
 .icons i {
@@ -398,15 +379,11 @@ left:15px;
   color: gray;
 }
 
-.card-image{
-  height:40%;
-}
-.card-image img{
+.card-image img {
   margin-top: 1.5rem;
   width: 100%;
   height: auto;
   object-fit: cover;
-  display: block;
 }
 
 .bottom-icon {
@@ -422,165 +399,169 @@ left:15px;
   font-size: 1rem;
   color: gray;
   cursor: pointer;
-  transition: color 0.2s ease;
-  font-weight: 400;
-
 }
 
-.bottom-icon i span{
+.bottom-icon i span {
   margin-left: 7px;
 }
 
 .bottom-icon i:hover {
-  background-color:rgba(0, 0, 0, 0.068) ; 
+  background-color: rgba(0, 0, 0, 0.068);
 }
 
-
-/* =====================
-   Tablet / Medium Screens
-===================== */
+/* ============================================
+   TABLET VIEW (max-width: 1024px)
+============================================ */
 @media screen and (max-width: 1024px) {
-  .leftsection {
-    width: 25%;
-  }
+  .leftsection { width: 22%; }
+  .centersection { width: 55%; left: 22%; }
+  .rightsection { width: 23%; left: 77%; }
 
-  .centersection {
-    width: 50%;
-    left: 25%;
-  }
+  .topbar { width: 90%; margin-left: 5%; }
+  .topbar-content input { width: 18rem; }
 
-  .rightsection {
-    width: 25%;
-    left: 75%;
-    top: 15%;
-  }
-
-  .searchbar input {
-    width: 12rem;
-    left: 60px;
-  }
-
-  .topbar-content input {
-    width: 20rem;
-  }
-
-  .stories-container {
-    gap: 8px;
-  }
-
-  .story {
-    height: 10rem;
-    width: 6rem;
-  }
-
-  .sponsored-container {
-    width: 90%;
-    margin: 20px auto;
-  }
+  .story { height: 10rem; width: 6rem; }
 }
 
-/* =====================
-   Small Screens / Mobile
-===================== */
+/* ============================================
+   MOBILE VIEW (max-width: 768px)
+============================================ */
+
 @media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
+
+
+  .leftsection, 
+  .rightsection { 
+    display: none; 
   }
+
+
+ nav .icons ul {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  height: 100%;
+}
+
+nav .icons ul li {
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+}
+
+
 
   .logo img {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    padding: 0;
     position: static;
-    margin: 0 auto;
-    display: block;
   }
 
-  .icons ul {
-    justify-content: center;
-    margin-top: 5px;
-  }
-
-  .leftsection,
-  .rightsection {
-    position: static;
-    width: 100%;
-    height: auto;
-  }
-
-  .centersection {
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-
-  .searchbar input,
-  .topbar-content input {
-    width: 90%;
-    left: 0;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .stories-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .story {
-    height: 8rem;
-    width: 40%;
-    margin: 10px 5px;
-  }
-
-  .feed-content {
-    width: 95%;
-    left: 0;
-    margin: 1rem auto;
-  }
-
-  .sponsored-container {
-    width: 95%;
-    margin: 15px auto;
-  }
-
-  .topbar {
-    width: 95%;
-    margin: 10px auto;
-  }
-}
-
-/* =====================
-   Extra Small / Phones
-===================== */
-@media screen and (max-width: 480px) {
-  .searchbar input,
-  .topbar-content input {
-    width: 95%;
-    font-size: 0.9rem;
-  }
-
-  .story {
-    width: 90%;
-    height: 6rem;
-    margin: 8px auto;
-  }
-
-  .sponsored-container,
-  .feed-content {
-    width: 95%;
-    margin: 10px auto;
-  }
-
-  .topbar {
-    width: 95%;
-    margin: 10px auto;
-  }
-
+  /* Show only 4 icons: Home, Reels, Friends, Marketplace */
   .icons ul li {
+    display: none; /* hide all first */
+  }
+
+  .icons ul li:nth-child(1),
+  .icons ul li:nth-child(2),
+  .icons ul li:nth-child(3),
+  .icons ul li:nth-child(4) {
+    display: block !important;   /* show only 4 icons */
     margin: 0 10px;
   }
 
+  /* Hide the top-right menu icons */
+  .sidemenu { 
+    display: none !important; 
+  }
+
+  /* SEARCH ICON (IF YOU WANT TO SHOW) */
+  .nav-search-icon {
+    display: block;
+  }
+
+  /* CENTER SECTION */
+  .centersection {
+    width: 100%;
+    left: 0;
+    top: 65px;
+    padding: 0;
+  }
+
+  /* TOPBAR FIX (remove side icons) */
+  #side-img {
+    display: none !important;   /* hide image/video/smile icons */
+  }
+
+  .topbar-content input {
+    width: 80%;
+    left: 10px;
+  }
+
+  /* Stories scroll */
+  .stories-container {
+    width: 100%;
+    overflow-x: auto;
+    gap: 10px;
+    padding-left: 10px;
+  }
+
+  .story {
+    flex: 0 0 85px;
+    height: 150px;
+  }
+
+  .feed-content {
+    width: 95%;
+    margin: 10px auto;
+    left: 0;
+    top: 0;
+  }
+}
+
+
+/* ============================================
+   EXTRA SMALL (max-width: 480px)
+============================================ */
+@media screen and (max-width: 480px) {
+
+  nav {
+    padding: 6px 10px;
+  }
+
+  /* Keep logo stable */
+  .logo img {
+    height: 30px;
+    width: 30px;
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Same 4 icons only */
+  .icons ul li {
+    display: none;
+  }
+
+  .icons ul li:nth-child(1),
+  .icons ul li:nth-child(2),
+  .icons ul li:nth-child(3),
+  .icons ul li:nth-child(4) {
+    display: block !important;
+  }
+
+  .story {
+    flex: 0 0 80px;
+    height: 135px;
+  }
+
+  .feed-content {
+    width: 98%;
+  }
+
   .bottom-icon i {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
